@@ -16,6 +16,37 @@ public class Cart {
 			System.out.println("The disc has been added");
 		}
 	}
+
+	void addDigitalVideoDisc(DigitalVideoDisc [] disc) {
+		for (int i = 0; i < disc.length; i++) {
+			this.itemOrdered[qtyOrdered] = disc[i];
+			qtyOrdered++;
+			if (qtyOrdered == MAX_NUMBERS_ORDERED) {
+				System.out.println("The cart is already full");
+				break;
+			}
+		}
+		System.out.println("The disc has been added");
+	}
+
+	void addDigitalVideoDisc(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
+		if (qtyOrdered == MAX_NUMBERS_ORDERED) {
+			System.out.println("The cart is already full");
+		}
+		else {
+			this.itemOrdered[qtyOrdered] = disc1;
+			qtyOrdered++;
+			System.out.println("The disc1 has been added");
+			if (qtyOrdered == MAX_NUMBERS_ORDERED) {
+				System.out.println("The cart is already full");
+			}
+			else {
+				this.itemOrdered[qtyOrdered] = disc2;
+				qtyOrdered++;
+				System.out.println("The disc2 has been added");
+			}
+		}
+	}
 	
 	public int getQtyOrdered() {
 		return qtyOrdered;
