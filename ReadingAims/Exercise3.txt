@@ -1,0 +1,2 @@
+- truyền giá trị đến tham số, khi thay đổi giá trị tham số thì giá trị biến gốc không thay đổi.
+- truyền tham chiếu đến tham số, khi thay đổi giá trị của tham số thì giá trị của biến gốc cũng thay đổi theo
